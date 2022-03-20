@@ -15,7 +15,7 @@ class Game
     while true do
       @hash_keys = @flash_cards.keys
       if @hash_keys.empty?
-        delete_correct_answer
+        winner_message
         break
       else
         puts "You can type 'exit' and finish game in any time."
@@ -58,7 +58,7 @@ class Game
     print "> "
   end
 
-  def delete_correct_answer 
+  def winner_message 
     puts"="*20
     puts "Game over. You are the winner"
     puts"="*20
